@@ -4,9 +4,9 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center text-center gap-6 py-12">
       <img
-        src="/avatar.svg"
+        src="/avatar.png"
         alt="avatar"
-        className="w-32 h-32 rounded-full border-4 border-white shadow-lg"
+        className="w-40 h-40 object-contain drop-shadow-lg"
       />
       <div>
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
