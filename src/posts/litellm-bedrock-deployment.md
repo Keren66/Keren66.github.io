@@ -4,7 +4,7 @@ date: 2026-04-24
 excerpt: 本教程将指导您在 AWS EC2 上部署 LiteLLM 代理服务器，以统一的 OpenAI 兼容 API 格式调用 AWS Bedrock 上的 Claude 模型。
 ---
 
-# 在 AWS EC2 上部署 LiteLLM 代理 Bedrock Claude 模型完整指南
+
 
 本教程将指导您在 AWS EC2（Amazon Linux 2023，t3.medium 实例）上部署 LiteLLM 代理服务器，以统一的 OpenAI 兼容 API 格式调用 AWS Bedrock 上的 Claude 模型。通过这种方式，您可以轻松地将现有的基于 OpenAI API 的应用迁移到 Claude 模型，同时利用 LiteLLM 提供的成本追踪、负载均衡和虚拟密钥管理等企业级功能 [1]。
 
