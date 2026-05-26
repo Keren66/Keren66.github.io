@@ -5,18 +5,20 @@ export default function Projects() {
     <section>
       <h1 className="text-3xl font-bold mb-2">Projects</h1>
       <p className="text-slate-600 mb-8">
-        A selection of things I've built.
+        A selection of things I&apos;ve built.
       </p>
       <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((p) => (
           <div
             key={p.title}
-            className="block bg-white rounded-xl border border-slate-200 p-6 hover:shadow-lg hover:border-indigo-300 transition"
+            className="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-lg hover:border-indigo-300 transition"
           >
             <div className="flex items-start justify-between mb-2">
               <h2 className="text-xl font-semibold">{p.title}</h2>
               {p.date && (
-                <span className="text-xs text-slate-400 whitespace-nowrap ml-2 mt-1">{p.date}</span>
+                <span className="text-xs text-slate-400 whitespace-nowrap ml-2 mt-1">
+                  {p.date}
+                </span>
               )}
             </div>
             <p className="text-slate-600 text-sm mb-4">{p.description}</p>

@@ -1,8 +1,8 @@
 const contacts = [
   {
     label: 'Email',
-    value: 'hello@example.com',
-    href: 'mailto:hello@example.com',
+    value: 'zkr1155124586@gmail.com',
+    href: 'mailto:zkr1155124586@gmail.com',
   },
   {
     label: 'GitHub',
@@ -10,9 +10,9 @@ const contacts = [
     href: 'https://github.com/Keren66',
   },
   {
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/keren',
-    href: 'https://www.linkedin.com/',
+    label: 'Telegram',
+    value: '@KerenHermes',
+    href: 'https://t.me/KerenHermes',
   },
 ]
 
@@ -21,7 +21,7 @@ export default function Contact() {
     <section>
       <h1 className="text-3xl font-bold mb-2">Contact</h1>
       <p className="text-slate-600 mb-8">
-        The best ways to reach me. I try to reply within a few days.
+        Feel free to reach out — I usually reply within 24 hours.
       </p>
       <ul className="space-y-4">
         {contacts.map((c) => (

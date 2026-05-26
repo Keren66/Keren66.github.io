@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom'
 
 const links = [
-  { to: '/', label: 'Home', end: true },
-  { to: '/projects', label: 'Projects' },
-  { to: '/blog', label: 'Blog' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/', label: '🏠 Home', end: true },
+  { to: '/projects', label: '📦 Projects' },
+  { to: '/blog', label: '📝 Blog' },
+  { to: '/contact', label: '✉️ Contact' },
 ]
 
 export default function Navbar() {
@@ -12,7 +12,10 @@ export default function Navbar() {
     <header className="border-b border-slate-200 bg-white/80 backdrop-blur sticky top-0 z-10">
       <nav className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
         <NavLink to="/" className="font-semibold text-lg tracking-tight">
-          Keren Zhang
+          <span className="text-indigo-600">KZ</span>
+          <span className="text-slate-600 font-normal text-sm ml-2 hidden sm:inline">
+            Keren Zhang
+          </span>
         </NavLink>
         <ul className="flex gap-6 text-sm">
           {links.map((l) => (

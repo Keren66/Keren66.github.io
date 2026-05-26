@@ -10,3 +10,21 @@ body {
   font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
   margin: 0;
 }
+
+/* Smooth gradient for code blocks */
+.prose pre {
+  @apply bg-slate-900 text-slate-100 rounded-xl;
+}
+
+/* Better link underlines */
+.prose a {
+  @apply text-indigo-600 no-underline hover:underline decoration-indigo-300;
+}
+
+/* Subtle card hover lift */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
