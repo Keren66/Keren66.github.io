@@ -9,6 +9,15 @@ const projects = [
     date: '2026-05-26',
   },
   {
+    title: 'AI in Crypto Exchanges Research Report',
+    description:
+      'Comprehensive analysis of AI applications and growth opportunities for SME cryptocurrency exchanges. 16-page report covering smart trading, security, compliance automation, risk analysis, and AWS architecture — with 114+ references.',
+    tech: ['AWS Bedrock', 'Amazon SageMaker', 'CEX Architecture'],
+    link: 'https://github.com/Keren66/Keren66.github.io',
+    demo: 'https://keren66.github.io/blog/ai-crypto-exchange-report',
+    date: '2026-06-02',
+  },
+  {
     title: 'Personal Website',
     description:
       'This very site — built with React, Vite, Tailwind CSS, and deployed on GitHub Pages.',
