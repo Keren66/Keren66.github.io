@@ -134,6 +134,14 @@ header p { color: var(--text2); font-size: 0.9rem; margin-top: 0.3rem; }
       <option value="zh">🇨🇳 中文 Only</option>
     </select>
     <button id="themeToggle" onclick="toggleTheme()">☀️ Light</button>
+    <span style="display:flex;align-items:center;gap:6px;">
+      <button onclick="prevQuestion()" title="← 上一题">◀</button>
+      <input id="qJumpInput" type="number" min="1" max="325" value="1"
+        style="width:60px;padding:6px 8px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:0.9rem;text-align:center;"
+        onkeydown="if(event.key==='Enter')jumpToQ()" />
+      <button onclick="jumpToQ()" title="跳转">⏩</button>
+      <button onclick="nextQuestion()" title="→ 下一题">▶</button>
+    </span>
     <button onclick="showAnswer()">💡 Show Answer</button>
     <button class="btn-orange" onclick="resetExam()">🔄 Reset</button>
   </div>
@@ -211,6 +219,8 @@ function updateProgress() {
 
 // ===== Render =====
 function renderQuestion() {
+  const input = document.getElementById('qJumpInput');
+  if (input) input.value = currentIndex + 1;
   if (currentIndex >= questions.length) {
     showResults();
     return;
@@ -329,7 +339,29 @@ function nextQuestion() {
     showResults();
   } else {
     renderQuestion();
+    document.getElementById('qJumpInput').value = currentIndex + 1;
   }
+}
+
+function prevQuestion() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    renderQuestion();
+    document.getElementById('qJumpInput').value = currentIndex + 1;
+  }
+}
+
+function jumpToQ() {
+  const input = document.getElementById('qJumpInput');
+  let idx = parseInt(input.value) - 1;
+  if (isNaN(idx) || idx < 0) idx = 0;
+  if (idx >= questions.length) idx = questions.length - 1;
+  currentIndex = idx;
+  input.value = currentIndex + 1;
+  $results.classList.remove('show');
+  $quiz.classList.remove('hidden');
+  renderQuestion();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function showResults() {
@@ -369,6 +401,7 @@ function jumpToQuestion(idx) {
   $results.classList.remove('show');
   $quiz.classList.remove('hidden');
   renderQuestion();
+  document.getElementById('qJumpInput').value = currentIndex + 1;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -381,6 +414,16 @@ document.addEventListener('keydown', (e) => {
   if ($results.classList.contains('show')) return;
   const q = questions[currentIndex];
   const qId = `${q.exam}-${q.id}`;
+  if (e.key === 'ArrowRight') {
+    e.preventDefault();
+    nextQuestion();
+    return;
+  }
+  if (e.key === 'ArrowLeft') {
+    e.preventDefault();
+    prevQuestion();
+    return;
+  }
   if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
     if (answers[qId]) nextQuestion();
