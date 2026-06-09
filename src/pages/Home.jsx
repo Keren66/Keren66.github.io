@@ -48,6 +48,13 @@ export default function Home() {
         <span className="text-lg">📚 AWS SCS-C03 安全专项刷题</span>
         <span className="block text-sm text-slate-600 mt-1">325题中英双语 · 亮色/暗色主题 · 自动评分</span>
       </a>
+      <a
+        href="/blog/web3-exchange-security-architecture"
+        className="block w-full max-w-md mx-auto p-4 bg-gradient-to-r from-sky-50 to-indigo-50 border border-sky-200 rounded-xl hover:shadow-md hover:border-sky-400 transition text-center"
+      >
+        <span className="text-lg">📊 Web3交易所安全架构白皮书</span>
+        <span className="block text-sm text-slate-600 mt-1">23层防御 · OWASP全映射 · VARA合规 · 附完整Excel报价清单</span>
+      </a>
     </section>
   )
 }
