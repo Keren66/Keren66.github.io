@@ -24,6 +24,15 @@ const projects = [
     tech: ['React', 'Vite', 'Tailwind'],
     link: 'https://github.com/Keren66/Keren66.github.io',
   },
+  {
+    title: 'AWS SCS-C03 安全专项刷题 - 中英双语题库',
+    description:
+      '325道AWS Security SCS-C03真题，中英双语对照，5套模拟考试。支持亮色/暗色主题切换、语言切换、键盘快捷键、自动评分与错题回顾。',
+    tech: ['AWS Security', 'JavaScript', 'HTML/CSS'],
+    link: 'https://github.com/Keren66/Keren66.github.io',
+    demo: 'https://keren66.github.io/aws-scs-c03-bilingual.html',
+    date: '2026-06-09',
+  },
 ]
 
 export default projects

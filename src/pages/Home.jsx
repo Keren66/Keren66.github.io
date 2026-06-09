@@ -41,6 +41,13 @@ export default function Home() {
           GitHub
         </a>
       </div>
+      <a
+        href="/aws-scs-c03-bilingual.html"
+        className="mt-6 block w-full max-w-md mx-auto p-4 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl hover:shadow-md hover:border-amber-400 transition text-center"
+      >
+        <span className="text-lg">📚 AWS SCS-C03 安全专项刷题</span>
+        <span className="block text-sm text-slate-600 mt-1">325题中英双语 · 亮色/暗色主题 · 自动评分</span>
+      </a>
     </section>
   )
 }
