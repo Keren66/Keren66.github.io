@@ -4,8 +4,6 @@ date: 2026-06-02
 excerpt: A comprehensive analysis of AI applications and growth opportunities for SME cryptocurrency exchanges, covering smart trading, security, compliance automation, and AWS architecture.
 ---
 
-# AI in Cryptocurrency Exchanges — Research Report
-
 I published a research report today that analyzes how AI is reshaping the cryptocurrency exchange landscape, with a focus on small-to-medium exchanges.
 
 ## What's in the report
